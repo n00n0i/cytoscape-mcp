@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  cytoscape-mcp:
+    build: .
+    container_name: cytoscape-mcp
+    ports:
+      - "3100:3100"
+      - "3001:3001"
+    environment:
+      - MCP_PORT=3100
+      - WEB_PORT=3001
+      - OUTPUT_DIR=/app/output
+      - PUBLIC_URL=http://localhost:3001
+    volumes:
+      - ./output:/app/output

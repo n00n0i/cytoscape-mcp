@@ -1,0 +1,22 @@
+{
+  "name": "cytoscape-mcp",
+  "version": "1.0.0",
+  "description": "Cytoscape.js MCP Server with HTTP Streamable transport",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "web": "node src/web-server.js",
+    "postinstall": "node scripts/copy-libs.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.15.0",
+    "cors": "^2.8.5",
+    "cytoscape": "^3.32.1",
+    "cytoscape-dagre": "^2.5.0",
+    "dagre": "^0.8.5",
+    "express": "^4.21.2",
+    "uuid": "^9.0.1",
+    "zod": "^3.25.54"
+  }
+}
