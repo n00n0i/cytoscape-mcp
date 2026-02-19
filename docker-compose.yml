@@ -5,12 +5,12 @@ services:
     build: .
     container_name: cytoscape-mcp
     ports:
-      - "3100:3100"
-      - "3001:3001"
+      - "3103:3100"  # MCP server (host:3103 -> container:3100)
+      - "3004:3001"  # Web server (host:3004 -> container:3001)
     environment:
       - MCP_PORT=3100
       - WEB_PORT=3001
       - OUTPUT_DIR=/app/output
-      - PUBLIC_URL=http://localhost:3001
+      - PUBLIC_URL=http://localhost:3004
     volumes:
       - ./output:/app/output
